@@ -14,7 +14,7 @@ def home_page():
 
 
 @app.route('/<name>')
-def profile(name='Anand Kumar Jha'):
+def profile(name):
     return render_template('index.html', name=name)
 
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
     <title>{% block title %}My Portfolio{% endblock %}</title>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -79,10 +79,12 @@
         <div class="row">
           <div class="col-lg-12">
             <img class="img-responsive img-thumbnail" id="a" src="/static/img/profile_final.jpg" alt="" width="304" height="236" />
-            <div class="intro-text pt-4">
-              <h1 class="name">Hi! {{name}}</h1>
+            <div class="intro-text ">
+              <h1 class="name">
+                Hi! I am Anand
+              </h1>
               <hr class="star-light" />
-              <span class="skills">Python Developer - Flask Framework</span>
+              <span class="skills">Python Developer - Django & Flask Framework</span>
             </div>
           </div>
         </div>
@@ -103,31 +105,31 @@
           <div class="col-sm-4 portfolio-item">
             <a href="https://celestial96.pythonanywhere.com/" target="_blank" class="portfolio-link" data-toggle="modal">
               <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
+                <div class="caption-content"><i class="fa fa-search-plus fa-3x"></i>Space Venture</div>
               </div>
               <img src="/static/img/portfolio/flaskZTMport.png" target="_blank" class="img-responsive" alt="anotherFlaskPortfolio" />
+              <br />
+              <p><strong>MyPortfolio 1.0 using Flask</strong></p>
             </a>
           </div>
           <div class="col-sm-4 portfolio-item">
             <a href="http://akjfun.com" target="_blank" class="portfolio-link" data-toggle="modal">
               <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
+                <div class="caption-content"><i class="fa fa-search-plus fa-3x"></i>Head to akjfun.com</div>
               </div>
               <img src="/static/img/portfolio/akjfun.png" class="img-responsive" alt="Django Portfolio" />
+              <br />
+              <p><strong>MyPortfolio 2.0 using Django, Gunicorn, Ngix and my own Domain akjfun.com</strong></p>
             </a>
           </div>
           <div class="col-sm-4 portfolio-item">
             <a href="https://www.youtube.com/channel/UC01icb2h_kVkdGhgwUvu1wg" target="_blank" class="portfolio-link" data-toggle="modal">
               <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
+                <div class="caption-content"><i class="fa fa-search-plus fa-3x"></i>Youtube Channel</div>
               </div>
               <img src="/static/img/portfolio/youtube.png" class="img-responsive" alt="Circus tent" />
+              <br />
+              <p><strong>My youtube channel depicting my projects... P.S. like and sub ;-)</strong></p>
             </a>
           </div>
         </div>
@@ -162,7 +164,7 @@
           <div class="row">
             <div class="footer-col col-md-4">
               <h3>Location</h3>
-              <p>Chicago Illinois, <br />United States</p>
+              <p>India</p>
             </div>
             <div class="footer-col col-md-4">
               <h3></h3>
@@ -172,13 +174,13 @@
               <h3>Around the Web</h3>
               <ul class="list-inline">
                 <li>
-                  <a href="https://www.facebook.com/CleverProgrammerr/?ref=br_rs" target="_blank" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                  <a href="https://www.facebook.com/akjha132" target="_blank" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
                 </li>
                 <li>
-                  <a href="https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ" class="btn-social btn-outline" target="_blank"><span class="sr-only">YouTube</span><i class="fa fa-fw fa-youtube"></i></a>
+                  <a href="https://www.youtube.com/channel/UC01icb2h_kVkdGhgwUvu1wg" class="btn-social btn-outline" target="_blank"><span class="sr-only">YouTube</span><i class="fa fa-fw fa-youtube"></i></a>
                 </li>
                 <li>
-                  <a href="https://github.com/CleverProgrammer" class="btn-social btn-outline" target="_blank"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-github"></i></a>
+                  <a href="https://github.com/akjha96" class="btn-social btn-outline" target="_blank"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-github"></i></a>
                 </li>
               </ul>
             </div>
