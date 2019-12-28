@@ -13,11 +13,6 @@ def home_page():
     return render_template('index.html')
 
 
-@app.route('/<name>')
-def profile(name):
-    return render_template('index.html', name=name)
-
-
 @app.route('/add_numbers', methods=['GET', 'POST'])
 def add_numbers_post():
     # --> ['5', '6', '8']
@@ -37,13 +32,10 @@ def add_numbers_post():
 
 @app.route('/shopping_list', methods=['GET', 'POST'])
 def shopping_list_post():
-    # --> ['5', '6', '8']
-    # print(type(request.form['text']))
 
     if request.method == 'GET':
         return render_template('shopping_list.html')
     elif request.method == 'POST':
-        print(request.form['text'].split())
 
         shop_list = []
         try:
@@ -58,21 +50,14 @@ def shopping_list_post():
 
 @app.route('/time', methods=['GET', 'POST'])
 def time_post():
-    # --> ['5', '6', '8']
-    # print(type(request.form['text']))
 
     if request.method == 'GET':
         return render_template('time.html')
     elif request.method == 'POST':
-        print(request.form['text'].split())
+        answer = (datetime.datetime.now(pytz.timezone("Europe/Dublin")
+                                        ).strftime('Time = ' + '%H:%M:%S' + ' GMT ' + ' Year = ' + '%d-%m-%Y'))
 
-        for item in request.form['text'].split():
-            answer = (datetime.datetime.now(pytz.timezone("Europe/Dublin")
-                                            ).strftime('Time = ' + '%H:%M:%S' + ' GMT ' + ' Year = ' + '%d-%m-%Y'))
-            #answer = datetime.datetime.now().strftime('Time == ' + '%H:%M:%S' + ' Year == ' + '%d-%m-%Y')
-            #answer = datetime.datetime.now().strftime('%Y-%m-%d \n %H:%M:%S')
-
-            return render_template('time.html', result=answer)
+        return render_template('time.html', result=answer)
 
 
 @app.route('/python_apps')
